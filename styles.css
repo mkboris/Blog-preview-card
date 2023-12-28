@@ -1,0 +1,79 @@
+body {
+  font-family: "Figtree", sans-serif;
+  background-color: hsl(47, 88%, 63%);
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.blog-container {
+  display: flex;
+  padding: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+  border: 1px solid hsl(0, 0%, 7%);
+  box-shadow: 8px 8px 0px 0px hsl(0, 0%, 7%);
+}
+.blog {
+  width: 336px;
+}
+.illustration-img {
+  border-radius: 10px;
+  margin-bottom: 23px;
+}
+.learning-div {
+  width: 82px;
+  height: 29px;
+  background-color: hsl(47, 88%, 63%);
+  border-radius: 4px;
+  display: flex;
+  padding: 4px 12px;
+  justify-content: center;
+  align-items: center;
+}
+.learning,
+.main-heading {
+  font-weight: 800;
+}
+.learning,
+.date,
+.description,
+.author {
+  color: hsl(0, 0%, 7%);
+  /* font-size: 14px; */
+  line-height: 21px;
+}
+.date,
+.description {
+  font-weight: 500;
+}
+.main-heading {
+  color: hsl(0, 0%, 7%);
+  font-size: 24px;
+  line-height: 36px;
+}
+.main-heading:hover {
+  cursor: pointer;
+  color: hsl(47, 88%, 63%);
+}
+.description {
+  font-size: 16px;
+  color: hsl(0, 0%, 50%);
+  line-height: 24px;
+}
+.author-div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.author-pic {
+  width: 32px;
+  height: 32px;
+}
+.author {
+  font-weight: 800;
+}
