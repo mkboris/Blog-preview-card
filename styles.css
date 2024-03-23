@@ -1,79 +1,213 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  box-sizing: border-box;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
 body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+html,
+body {
+  margin: 0;
+  border: 0;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+body {
+  background: #f4d04e;
   font-family: "Figtree", sans-serif;
-  background-color: hsl(47, 88%, 63%);
-  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
 }
-.blog-container {
+
+.wrapper {
   display: flex;
-  padding: 24px;
   flex-direction: column;
   align-items: flex-start;
-  flex-shrink: 0;
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 20px;
-  border: 1px solid hsl(0, 0%, 7%);
-  box-shadow: 8px 8px 0px 0px hsl(0, 0%, 7%);
+  padding: 1.5rem;
+  gap: 1.5rem;
+  background: #ffffff;
+  border: 1px solid #111111;
+  box-shadow: 0.5rem 0.5rem 0 #000000;
+  border-radius: 1.25rem;
+  max-width: 20.4375rem;
 }
-.blog {
-  width: 336px;
+
+.illustration-container img {
+  border-radius: 0.625rem;
 }
-.illustration-img {
-  border-radius: 10px;
-  margin-bottom: 23px;
-}
-.learning-div {
-  width: 82px;
-  height: 29px;
-  background-color: hsl(47, 88%, 63%);
-  border-radius: 4px;
+
+.text-container {
   display: flex;
-  padding: 4px 12px;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
 }
-.learning,
-.main-heading {
+
+.learning-div {
+  padding: 0.25rem 0.75rem;
+  background: #f4d04e;
+  border-radius: 0.25rem;
+  max-width: fit-content;
+}
+
+.learning {
   font-weight: 800;
+  font-size: 0.75rem;
 }
+
 .learning,
 .date,
+.main-heading,
 .description,
 .author {
-  color: hsl(0, 0%, 7%);
-  /* font-size: 14px; */
-  line-height: 21px;
+  margin-top: 0;
+  line-height: 150%;
 }
+
+.learning,
 .date,
+.main-heading,
+.author {
+  color: #111111;
+}
+
+.date {
+  font-weight: 500;
+  font-size: 0.75rem;
+}
+
+.main-heading {
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+
+.main-heading:hover {
+  color: #f4d04e;
+  cursor: pointer;
+}
+
 .description {
   font-weight: 500;
+  font-size: 0.875rem;
+  color: #7f7f7f;
 }
-.main-heading {
-  color: hsl(0, 0%, 7%);
-  font-size: 24px;
-  line-height: 36px;
-}
-.main-heading:hover {
-  cursor: pointer;
-  color: hsl(47, 88%, 63%);
-}
-.description {
-  font-size: 16px;
-  color: hsl(0, 0%, 50%);
-  line-height: 24px;
-}
-.author-div {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.author-pic {
-  width: 32px;
-  height: 32px;
-}
+
 .author {
   font-weight: 800;
+  font-size: 0.875rem;
+}
+
+.author-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.author-container img {
+  max-width: 2rem;
+}
+
+@media screen and (min-width: 28.5rem) {
+  .wrapper {
+    box-shadow: 1rem 1rem 0 #000000;
+    max-width: 24rem;
+  }
+
+  .learning,
+  .date {
+    font-size: 0.875rem;
+  }
+
+  .main-heading {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
 }
