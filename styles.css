@@ -194,7 +194,7 @@ body {
 
 @media screen and (min-width: 28.5rem) {
   .wrapper {
-    box-shadow: 1rem 1rem 0 #000000;
+    /* box-shadow: 1rem 1rem 0 #000000; */
     max-width: 24rem;
   }
 
